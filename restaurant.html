@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize.css for better cross-browser consistency -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" />
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Restaurant Info</title>
+</head>
+
+<body class="inside">
+    <!-- Beginning header -->
+    <header>
+        <!-- Beginning nav -->
+        <h1 tabindex="0">Restaurant Reviews</h1>
+        <!-- Beginning breadcrumb -->
+        <nav role="navigation">
+            <ul id="breadcrumb">
+                <li tabindex="0"><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        <!-- End breadcrumb -->
+        <!-- End nav -->
+    </header>
+    <!-- End header -->
+
+    <!-- Beginning main -->
+    <main id="maincontent" role="main">
+        <!-- Beginning restaurant -->
+        <section tabindex="0" id="restaurant-container">
+            <h2 tabindex="0" id="restaurant-name"></h2>
+            <img id="restaurant-img">
+            <p tabindex="0" id="restaurant-cuisine">Restaurant cuisine: </p>
+            <p tabindex="0" id="restaurant-address">Restaurant address: </p>
+            <p tabindex="0" id="restaurant-hours-title">Restaurant hours:</p>
+            <table tabindex="0" id="restaurant-hours"></table>
+        </section>
+        <!-- end restaurant -->
+        <!-- Beginning reviews -->
+        <section tabindex="0" id="reviews-container">
+            <ul tabindex="0" id="reviews-list"></ul>
+        </section>
+        <!-- End reviews -->
+        <!-- Beginning map -->
+        <section tabindex="0" id="map-container">
+            <h2 tabindex="0">Location of restaurant</h2>
+            <div id="map" tabindex="0" role="application"></div>
+        </section>
+        <!-- End map -->
+    </main>
+    <!-- End main -->
+
+    <!-- Beginning footer -->
+    <footer id="footer">
+        <p>Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.</p>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Beginning scripts -->
+    <!-- Database helpers -->
+    <script src="js/dbhelper.js"></script>
+    <!-- Service register -->
+    <script src="js/service-register.js"></script>
+    <!-- Main javascript file -->
+    <script src="js/restaurant_info.js"></script>
+    <!-- Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR-GOOGLE-MAPS-API-KEY&libraries=places&callback=initMap"></script>
+    <!-- End scripts -->
+
+</body>
+
+</html>

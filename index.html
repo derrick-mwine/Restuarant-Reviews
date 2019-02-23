@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize.css for better cross-browser consistency -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css" />
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Restaurant Reviews</title>
+</head>
+
+<body>
+    <header>
+        <h1 tabindex="0">Restaurant Reviews</h1>
+    </header>
+
+    <!-- Beginning main -->
+    <main id="maincontent" role="main">
+        <section>
+            <div class="filter-options">
+                <h2 tabindex="0">Filter Results</h2>
+                <label id="neighborhood-selec-label" for="neighborhoods">Select neighborhood</label>
+                <select tabindex="0" aria-labelledby="neighborhood-selec-label" id="neighborhoods-select" aria-describedby="neighborhoods-select-info" name="neighborhoods" onchange="updateRestaurants()">
+                    <option value="all">All Neighborhoods</option>
+                </select>
+                <p id="neighborhoods-select-info">Select location</p>
+                <label id="cuisine-selec-label" for="cuisines">Select cuisine</label>
+                <select tabindex="0" aria-labelledby="cuisine-selec-label" id="cuisines-select" aria-describedby="cuisine-select-info" name="cuisines" onchange="updateRestaurants()">
+                    <option value="all">All Cuisines</option>
+                </select>
+                <p id="cuisine-select-info">Select cuisine</p>
+            </div>
+            <ul id="restaurants-list"></ul>
+            <p id="more-info">Press link to display more details</p>
+        </section>
+        <section id="map-container" aria-hidden="true">
+            <h2>Location of restaurants</h2>
+            <div id="map" tabindex="0" role="application"></div>
+        </section>
+    </main>
+    <!-- End main -->
+
+    <!-- Beginning scripts -->
+    <!-- Database helpers -->
+    <script src="js/dbhelper.js"></script>
+    <!-- Main javascript file -->
+    <script src="js/main.js"></script>
+    <!-- Service register -->
+    <script src="js/service-register.js"></script>
+    <!-- Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
+    <!-- End scripts -->
+
+    <footer id="footer">
+        <p>Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
